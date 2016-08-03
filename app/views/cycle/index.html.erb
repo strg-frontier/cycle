@@ -1,0 +1,18 @@
+<div class="pict-content">
+  <% @articles.each do |article| %>
+    <li class="col">
+      <div class="thumbnail__figure" style="background-image:url(<%= article.image %>)"></div></a>
+        <div class="thumbnail__caption">
+         <h3 class="text-xsmall text-overflow" title="<%= article.title %>">
+            <%= article.title %>
+          </h3>
+          <p class="text-small">
+            <div class="article">
+              <%= article.text %>
+            </div>
+          </p>
+        </div>
+      </div>
+    </li>
+  <% end %>
+</div>

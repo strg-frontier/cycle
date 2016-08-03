@@ -1,0 +1,53 @@
+// Place all the styles related to the cycle controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body, html {
+  height: 100%;
+  background-color: #f4f4f4;
+}
+
+h1, h2, h3, h4, h5, h6, p, body {
+  line-height: 1.77;
+  font-size: 18px;
+  color: #4a4a4a;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 50px;
+  background-color: gray;
+}
+
+header .title {
+  width: 100px;
+  color: #3333a7;
+  float: left;
+}
+
+.contents {
+  width: 900px;
+  height: 500px;
+  background-color: #bbbbbb
+}
+
+.main-content {
+  width: 850px;
+  height: 500px;
+  background-color: #aaaaaa
+}
+
+.col .thumbnail__figure{
+  width: 350px;
+  height: 250px;
+  padding-top:100%;box-shadow:0px 0px 1px 1px rgba(0,0,0,0.1) inset;background-size:cover;background-position:50% 50%;background-repeat:no-repeat
+}
+
+
+footer {
+  height: 70px;
+  background-color: gray;
+}
