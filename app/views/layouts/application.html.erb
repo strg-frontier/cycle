@@ -49,13 +49,13 @@
     <!-- login_user -->
     <% if user_signed_in? %>
       <div class="login_information">
-        <p class="user-name">TestUserでログイン中です</p>
+        <p class="user-name"><%= link_to "#{current_user.nickname}", "/users/#{current_user.id}" %>でログイン中です</p>
         <p class="logout">ログアウト</p>
       </div>
     <% else %>
       <div class="login_information">
-        <p class="login">ログイン</p>
-        <p class="registration">新規登録</p>
+        <p class="login"><%= link_to 'ログイン', "/users/sign_in" %></p>
+        <p class="registration"><%= link_to '新規登録', "/users/sign_up" %></p>
       </div>
     <% end %>
     <!-- end of login user -->
