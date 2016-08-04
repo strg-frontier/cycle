@@ -47,9 +47,17 @@
     <!-- End Logo -->
 
     <!-- login_user -->
-    <div class="login-user">
-      <p class="user-name">TestUserでログイン中です</p>
-    </div>
+    <% if user_signed_in? %>
+      <div class="login_information">
+        <p class="user-name">TestUserでログイン中です</p>
+        <p class="logout">ログアウト</p>
+      </div>
+    <% else %>
+      <div class="login_information">
+        <p class="login">ログイン</p>
+        <p class="registration">新規登録</p>
+      </div>
+    <% end %>
     <!-- end of login user -->
 
     <!-- Begin Menu -->

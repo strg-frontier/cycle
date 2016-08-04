@@ -1,0 +1,116 @@
+
+
+<!-- Begin Wrapper -->
+<div class="wrapper"><!-- Begin Intro -->
+<div class="intro">Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum, Vestibulum id ligula porta. </div>
+<ul class="social">
+<li><a class="rss" href="#"></a></li><li><a class="facebook" href="#"></a></li><li><a class="twitter" href="#"></a></li><li><a class="pinterest" href="#"></a></li><li><a class="dribbble" href="#"></a></li><li><a class="flickr" href="#"></a></li><li><a class="linkedin" href="#"></a></li></ul><!-- End Intro --> 
+
+
+
+<!-- Begin Container -->
+<div class="content">
+    <!-- End Post -->   
+  <div id="respond">
+    <h3 id="reply-title">Sign up</h3>
+      <!--   <form action="#" method="post" id="commentform"> -->
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+          <p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>
+          <p class="comment-form-url">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true %>
+          </p>
+          <p class="comment-form-url">
+            <%= f.label :password %>
+              <% if @minimum_password_length %>
+                <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br />
+            <%= f.password_field :password, autocomplete: "off" %>
+          </p>
+          <p class="comment-form-comment">
+            <%= f.label :password_confirmation %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "off" %>
+          </p>
+          <p class="form-submit">
+          <%= f.submit "Sign up" %>
+          </p>
+        <% end %>
+      <%= render "devise/shared/links" %>
+
+        <!-- </form> -->
+      </div><!-- #respond --> 
+    
+    </div>  
+    <!-- End Comment Wrapper -->
+
+</div>
+<!-- End Container -->
+
+<!-- Begin Sidebar -->
+<div class="sidebar box">
+  <div class="sidebox widget">
+      <h3 class="widget-title">Popular Posts</h3>
+      <ul class="post-list">
+          <li> 
+            <div class="frame">
+              <a href="#"><img src="style/images/art/s1.jpg" /></a>
+            </div>
+          <div class="meta">
+              <h6><a href="#">Charming Winter</a></h6>
+              <em>28th Sep 2012</em>
+            </div>
+        </li>
+        <li> 
+            <div class="frame">
+              <a href="#"><img src="style/images/art/s2.jpg" /></a>
+            </div>
+          <div class="meta">
+              <h6><a href="#">Trickling Stream</a></h6>
+              <em>5th Sep 2012</em>
+            </div>
+        </li>
+        <li> 
+            <div class="frame">
+              <a href="#"><img src="style/images/art/s3.jpg" /></a>
+            </div>
+          <div class="meta">
+              <h6><a href="#">Morning Glory</a></h6>
+              <em>26th Sep 2012</em>
+            </div>
+        </li>
+      </ul>
+      
+  </div>
+  
+  <div class="sidebox widget">
+    <h3 class="widget-title">Search</h3>
+    <form class="searchform" method="get" action="#">
+      <input type="text" name="s" value="type and hit enter" onFocus="this.value=''" onBlur="this.value='type and hit enter'"/>
+    </form>
+  </div>
+  
+  <div class="sidebox widget">
+    <h3 class="widget-title">Custom Text</h3>
+    <div>Suspendisse eu odio quis elit ultrice commodo tempor eget arcu. Sedur aliquet posuere lectus aliquam iaculi. Curabitur a risus metus. In ut lorem nisl, et adipiscing sapien. Donec sed risus tristiq scelerisque. </div>
+  </div>
+  
+  <div class="sidebox widget">
+    <h3 class="widget-title">Categories</h3>
+      <ul>
+        <li><a href="#">Detektivbyrån</a></li>
+        <li><a href="#">Flowers</a></li>
+        <li><a href="#">Funny</a></li>
+        <li><a href="#">Journal</a></li>
+        <li><a href="#">Landscape</a></li>
+        <li><a href="#">Nature</a></li>
+        <li><a href="#">Photography</a></li>
+        <li><a href="#">Video</a>
+      </li>
+    </ul>
+</div></div>
+<!--End Sidebar -->
+<div class="clear"></div>
+
+</div>
+<!-- End Wrapper -->
