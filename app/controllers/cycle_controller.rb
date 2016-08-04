@@ -13,5 +13,11 @@ class CycleController < ApplicationController
   end
 
   def create
+    Article.create(check_params)
+  end
+
+  private
+  def check_params
+    params.permit(:title, :image, :text)
   end
 end
