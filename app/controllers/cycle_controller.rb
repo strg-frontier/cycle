@@ -19,6 +19,13 @@ class CycleController < ApplicationController
     Article.create(title: article_params[:title], image: article_params[:image], text: article_params[:text], user_id: current_user.id)
   end
 
+  def destroy
+    article = Article.find(params[:id])
+    if article.user_id == current_user.id
+      article.destroy
+    end
+  end
+
   private
   def article_params
     params.permit(:title, :image, :text)

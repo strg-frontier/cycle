@@ -22,6 +22,9 @@
         <span class="icon-image"><a href="#">September 26, 2012</a></span>
         <span class="likes"><a href="#" class="likeThis">44</a></span>
         <span class="comments"><a href="#">3</a></span>
+        <% if user_signed_in? && current_user.id == article.user.id %>
+          <span class="delete"><%= link_to 'Delete', "/cycle/#{article.id}", method: :delete %></span>
+        <% end %>
       </div>
     </div>
 
