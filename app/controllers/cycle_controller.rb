@@ -26,6 +26,17 @@ class CycleController < ApplicationController
     end
   end
 
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  def update
+    article = Article.find(params[:id])
+    if article.user_id == current_user.id
+      article.update(article_params)
+    end
+  end
+
   private
   def article_params
     params.permit(:title, :image, :text)

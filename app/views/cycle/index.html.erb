@@ -24,6 +24,7 @@
         <span class="comments"><a href="#">3</a></span>
         <% if user_signed_in? && current_user.id == article.user.id %>
           <span class="delete"><%= link_to 'Delete', "/cycle/#{article.id}", method: :delete %></span>
+          <span class="edit"><%= link_to 'Edit', "/cycle/#{article.id}/edit", method: :get %></span>
         <% end %>
       </div>
     </div>
