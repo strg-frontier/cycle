@@ -1,6 +1,6 @@
 class CycleController < ApplicationController
   def index
-    @articles = Article.all
+    @articles = Article.all.order("id DESC").page(params[:page]).per(6)
 
   end
 
