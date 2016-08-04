@@ -19,11 +19,11 @@
           <p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>
           <p class="comment-form-url">
             <%= f.label :email %><br />
-            <%= f.email_field :email, autofocus: true %>
+            <%= f.email_field :email %>
           </p>
           <p class="comment-form-url">
             <%= f.label :password %>
-              <% if @minimum_password_length %>
+              <% if @validatable %>
                 <em>(<%= @minimum_password_length %> characters minimum)</em>
               <% end %><br />
             <%= f.password_field :password, autocomplete: "off" %>
