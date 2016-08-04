@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get 'cycle' => 'cycle#index'
   get 'cycle/new' => 'cycle#new'
   get 'cycle/:id' => 'cycle#show'
+  post 'cycle' => 'cycle#create'
 end

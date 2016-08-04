@@ -11,4 +11,7 @@ class CycleController < ApplicationController
   def new
     @article = Article.find(1)
   end
+
+  def create
+  end
 end
