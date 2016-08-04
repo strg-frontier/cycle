@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   get 'cycle/new' => 'cycle#new'
   get 'cycle/:id' => 'cycle#show'
   post 'cycle' => 'cycle#create'
+  delete 'cycle/:id' => 'cycle#destroy'
   get 'users/:id' => 'users#show'
 end

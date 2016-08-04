@@ -1,21 +1,31 @@
-<!-- Begin Blog Grid -->
-<div class="blog-wrap">
-  <!-- Begin Blog -->
-  <div class="blog-grid">
-    <!-- Begin Image Format -->
-    <% @articles.each do |article| %>
-    <div class="post format-image box"> 
-      <div class="frame">
-        <%= link_to image_tag(article.image), "/cycle/#{article.id}" %>
-      </div>
-      <h2 class="title"><%= link_to "#{article.title}", "/cycle/#{article.id}" %></h2>
-      <p><%= article.text %></p>
-      <div class="details">
-        <span class="icon-image"><a href="#">September 26, 2012</a></span>
-        <span class="likes"><a href="#" class="likeThis">44</a></span>
-        <span class="comments"><a href="#">3</a></span>
+<div class="box">
+
+  <h1 class="title"><p><%= @nickname %></p></h1>
+  <div class="one-third">
+    <div class="outer none"><span class="inset"><img src="http://themes.iki-bir.com/obscura-wp/wp-content/uploads/about.jpg" alt="About" title="About" /></span></div>
+  </div>
+
+  <div class="two-third last">
+    <!-- Begin Blog Grid -->
+    <div class="blog-wrap">
+      <!-- Begin Blog -->
+      <div class="blog-grid">
+        <!-- Begin Image Format -->
+        <p><%= @nickname %>さんの投稿</p>
+        <% @articles.each do |article| %>
+        <div class="post format-image box"> 
+          <div class="frame">
+            <%= link_to image_tag(article.image), "/cycle/#{article.id}" %>
+          </div>
+          <h2 class="title"><%= link_to "#{article.title}", "/cycle/#{article.id}" %></h2>
+          <p><%= article.text %></p>
+          <div class="details">
+            <span class="icon-image"><a href="#">September 26, 2012</a></span>
+            <span class="likes"><a href="#" class="likeThis">44</a></span>
+            <span class="comments"><a href="#">3</a></span>
+          </div>
+        </div>
+        <% end %>
       </div>
     </div>
-    <% end %>
-  </div>
-</div>
+  </div></div>

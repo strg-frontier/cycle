@@ -18,6 +18,7 @@
       <h2 class="title"><%= link_to "#{article.title}", "/cycle/#{article.id}" %></h2>
       <p><%= article.text %></p>
       <div class="details">
+        <span class="icon-image"><%= link_to "#{article.user.nickname}", "/users/#{article.user_id}" %></a></span>
         <span class="icon-image"><a href="#">September 26, 2012</a></span>
         <span class="likes"><a href="#" class="likeThis">44</a></span>
         <span class="comments"><a href="#">3</a></span>

@@ -3,7 +3,7 @@ class CycleController < ApplicationController
   before_action :move_to_index, except: [:index ,:show]
 
   def index
-    @articles = Article.all.order("id DESC").page(params[:page]).per(6)
+    @articles = Article.includes(:user).page(params[:page]).per(6).order("created_at DESC")
 
   end
 
