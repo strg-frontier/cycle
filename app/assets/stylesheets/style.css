@@ -382,7 +382,6 @@ hr {
     display: inline-block;
     position: relative;
     max-width: 100%;
-    pointer-events: none;
     line-height: 1;
 }
 .outer span.inset img {

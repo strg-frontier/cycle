@@ -6,7 +6,7 @@
         <div class="sidebox widget">
             <h3 class="widget-title">Profile</h3>
             <% if @user.id == current_user.id %>
-            <em><%= link_to "edit", "/users/#{@user.id}/edit" %></em>
+            <em><%= link_to "edit", "/users/edit", method: :get %></em>
             <% end %>
             <ul class="post-list">
                 <li> 
