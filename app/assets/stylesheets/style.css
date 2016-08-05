@@ -383,7 +383,7 @@ hr {
     position: relative;
     max-width: 100%;
     pointer-events: none;
-    line-height: 0;
+    line-height: 1;
 }
 .outer span.inset img {
     pointer-events: auto
@@ -879,13 +879,14 @@ iframe {
 }
 .sidebox h3 {
     font-size: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 .widget ul.post-list {
     color: #B9B9B9;
     padding-bottom: 10px;
     margin-bottom: 20px;
     list-style: none;
+    /*min-height: 100px;*/
 }
 .widget ul.post-list:after {
     content: '';
@@ -934,7 +935,7 @@ iframe {
     color: #86aca3
 }
 .sidebox ul {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     list-style: none;
 }
 .sidebox a {

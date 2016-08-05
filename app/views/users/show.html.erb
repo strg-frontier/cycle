@@ -1,8 +1,44 @@
 <div class="box">
-
   <h1 class="title"><p><%= @nickname %></p></h1>
   <div class="one-third">
-    <div class="outer none"><span class="inset"><img src="http://themes.iki-bir.com/obscura-wp/wp-content/uploads/about.jpg" alt="About" title="About" /></span></div>
+    <div class="outer none"><span class="inset">
+      <div class="sidebar box">
+        <div class="sidebox widget">
+            <h3 class="widget-title">Profile</h3>
+            <ul class="post-list">
+                <li> 
+                  
+              </li>
+              <li> 
+                <div class="frame">
+                    <%= image_tag "aaa" %>
+                  </div>
+                <div class="meta">
+                    <h6><a href="#">Trickling Stream</a></h6>
+                    <em>registered at : <%= @user.created_at if @user.created_at?%></em>
+                  </div>
+              </li>
+            </ul>
+        </div>
+        <div class="sidebox widget">
+          <h3 class="widget-title">愛車</h3>
+          <% @user.mycycles.each do |mycyc|  %>
+          <div><%= mycyc.name %></div>
+        <% end %>
+      </div>
+      <div class="sidebox widget">
+          <h3 class="widget-title">About me</h3>
+            <ul>
+              <li>
+                <%= @user.profile %>
+            </li>
+          </ul>
+      </div>
+        
+    </div>
+      <!--End Sidebar -->
+
+    </span></div>
   </div>
 
   <div class="two-third last">
