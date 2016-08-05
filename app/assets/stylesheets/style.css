@@ -877,6 +877,11 @@ iframe {
 .sidebox .searchform {
     margin: 0
 }
+.sidebox .cycle_img {
+    width:80px;
+}
+.sidebox .cycle_txt {
+}
 .sidebox h3 {
     font-size: 15px;
     margin-bottom: 5px;
@@ -911,6 +916,14 @@ iframe {
 .widget ul.post-list li .frame {
     float: left;
     margin-right: 15px;
+}
+.widget ul.post-list li .frame .profile_img {
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    width:60px;
+    height:60px;
+    border :none;
 }
 .widget ul.post-list li .meta {
     overflow: hidden
